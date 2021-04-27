@@ -1,0 +1,42 @@
+﻿<Window x:Class="D2P_Exam.SpecificPatientDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:D2P_Exam"
+        mc:Ignorable="d"
+        Title="Almog Brand Home exam" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Button x:Name="btn_back" Content="Back" HorizontalAlignment="Left" Margin="20,55,0,0" VerticalAlignment="Top" Width="75" Click="btn_back_Click"/>
+        <Label x:Name="lbl_id" Content="ID" HorizontalAlignment="Left" Margin="585,91,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_id" HorizontalAlignment="Left" Height="23" Margin="639,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Label x:Name="lbl_name" Content="name" HorizontalAlignment="Left" Margin="585,130,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_name" HorizontalAlignment="Left" Height="23" Margin="639,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Label x:Name="lbl_DOB" Content="DOB" HorizontalAlignment="Left" Margin="585,169,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_DOB" HorizontalAlignment="Left" Height="23" Margin="639,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Label x:Name="lbl_phone" Content="Phone" HorizontalAlignment="Left" Margin="585,208,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_phone" HorizontalAlignment="Left" Height="23" Margin="639,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Label x:Name="lbl_email" Content="Email" HorizontalAlignment="Left" Margin="585,248,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_email" HorizontalAlignment="Left" Height="23" Margin="639,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+
+        <ListView x:Name="lv_images" HorizontalAlignment="Stretch" Height="305" Margin="20,93,228,0" VerticalAlignment="Top">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="1" Columns="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                        <Image Source="{Binding Image}" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill" Height="245"/>
+                        <TextBlock Text="{Binding Name}" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <Label Content="Patient Data Window" HorizontalAlignment="Left" Margin="315,18,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

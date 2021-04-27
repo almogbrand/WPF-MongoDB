@@ -1,0 +1,18 @@
+﻿<Window x:Class="D2P_Exam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:D2P_Exam"
+        mc:Ignorable="d"
+        Title="Almog Brand Home Exam" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <DataGrid x:Name="dg_patients" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" ColumnWidth="*" Height="311" Margin="13,63,13,0" VerticalAlignment="Top" RenderTransformOrigin="0.527,0.504" MouseDoubleClick="dg_patients_MouseDoubleClick" IsReadOnly="True" CellEditEnding="dg_patients_CellEditEnding"/>
+
+        <Button x:Name="btn_add" Content="New" HorizontalAlignment="Left" Margin="15,384,0,0" VerticalAlignment="Top" Width="75" Click="btn_add_Click"/>
+        <Button x:Name="btn_delete" Content="Delete" HorizontalAlignment="Left" Margin="112,384,0,0" VerticalAlignment="Top" Width="75" Click="btn_delete_Click"/>
+        <Button x:Name="btb_view" Content="View" HorizontalAlignment="Left" Margin="206,384,0,0" VerticalAlignment="Top" Width="75" Click="btb_view_Click"/>
+        <Label Content="Patients Data Screen" HorizontalAlignment="Left" Margin="325,21,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
